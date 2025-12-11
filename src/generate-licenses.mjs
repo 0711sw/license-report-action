@@ -42,7 +42,7 @@ init(
         const extraContent = fs.readFileSync(extraLicensesPath, 'utf8').trimEnd();
         if (extraContent.length > 0) {
           console.log('✅ Found extra licenses.txt, prepending to output.');
-          output += extraContent + '\n\n';
+          output += extraContent + '\n\n------------------------------------------------------------\n\n';
         }
       } catch (readErr) {
         console.error('⚠️ Error reading extra licenses.txt:', readErr);
